@@ -67,9 +67,29 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *bravecmd[] = { "brave", NULL };
+static const char *chromiumcmd[] = { "chromium", NULL };
+static const char *incognitobravecmd[] = { "brave", "--incognito",NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+    { MODKEY,                       XK_b,      spawn,          {.v = bravecmd} },
+    { MODKEY|ShiftMask,             XK_b,      spawn,          {.v = incognitobravecmd} },
+    { MODKEY,                       XK_e,      spawn,          SHCMD("st -e neomutt") },
+    { MODKEY,                       XK_equal,  spawn,          SHCMD(" amixer -D pulse sset Master 5%+ ;refbar.sh")},
+    { MODKEY,                       XK_minus,  spawn,          SHCMD(" amixer -D pulse sset Master 5%-;refbar.sh")},
+    { MODKEY,                       XK_w,      spawn,          SHCMD("brave --new-window https://web.whatsapp.com/") },
+    { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock")},
+    { 0,                            XK_Print,  spawn,          SHCMD(" flameshot full -p $HOME/Images/screenshots")},
+    { Mod1Mask,                     XK_Print,  spawn,          SHCMD(" flameshot gui")},
+    { Mod1Mask,                     XK_c,      spawn,          SHCMD("/home/gabriel/.local/bin/show_configs") },
+    { Mod1Mask,                     XK_equal,  spawn,          SHCMD("xbacklight -inc 1 ; refbar.sh")},
+    { Mod1Mask,                     XK_l,      spawn,          SHCMD("/home/gabriel/.local/bin/show_books") },
+    { Mod1Mask,                     XK_minus,  spawn,          SHCMD("xbacklight -dec 1 ; refbar.sh")},
+    { Mod1Mask,                     XK_r,      spawn,          SHCMD("st -e newsboat") },
+    { Mod1Mask,                     XK_t,      spawn,          SHCMD("telegram-desktop") },
+    { Mod1Mask|ShiftMask,           XK_q,      spawn,          SHCMD("shutdown -h now")},
+    { MODKEY,                       XK_c,      spawn,          {.v = chromiumcmd} },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
