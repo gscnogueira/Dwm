@@ -78,6 +78,7 @@ static const char *incognitobravecmd[] = { "brave", "--incognito",NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
     { MODKEY,                       XK_e,      spawn,          SHCMD("st -e neomutt") },
+    { MODKEY,                       XK_a,      spawn,          SHCMD("clipmenu") },
     { MODKEY,                       XK_equal,  spawn,          SHCMD(" amixer -D pulse sset Master 5%+ ;refbar.sh")},
     { MODKEY,                       XK_minus,  spawn,          SHCMD(" amixer -D pulse sset Master 5%-;refbar.sh")},
     { MODKEY,                       XK_w,      spawn,          SHCMD("brave --new-window https://web.whatsapp.com/") },
