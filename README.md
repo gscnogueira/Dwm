@@ -15,10 +15,11 @@
 - [colorbar](https://dwm.suckless.org/patches/colorbar/);
 - [fixborders](https://dwm.suckless.org/patches/alpha/);
 - [restartsig](https://dwm.suckless.org/patches/restartsig/);
+- [tagswapmon](https://github.com/bakkeby/patches/blob/master/dwm/dwm-tagswapmon-6.2.diff);
 - [scratchpads](https://dwm.suckless.org/patches/scratchpads/);
 - [sticky](https://dwm.suckless.org/patches/sticky/);
 - [swallow](https://dwm.suckless.org/patches/swallow/);
-- [vanitygaps](https://dwm.suckless.org/patches/viewontag/);
+- [fullgaps](https://dwm.suckless.org/patches/fullgaps/);
 ## Basic Key-biddings
 
 |Keys|Command|
