@@ -89,7 +89,6 @@ static Key keys[] = {
     { Mod1Mask,                     XK_equal,  spawn,          SHCMD("xbacklight -inc 1 ; refbar.sh")},
     { Mod1Mask,                     XK_l,      spawn,          SHCMD("/home/gabriel/.local/bin/show_books") },
     { Mod1Mask,                     XK_minus,  spawn,          SHCMD("xbacklight -dec 1 ; refbar.sh")},
-    { Mod1Mask,                     XK_r,      spawn,          SHCMD("st -e newsboat") },
     { Mod1Mask,                     XK_t,      spawn,          SHCMD("telegram-desktop") },
     { Mod1Mask|ShiftMask,           XK_q,      spawn,          SHCMD("shutdown -h now")},
     { MODKEY,                       XK_b,      spawn,          {.v = bravecmd} },
@@ -125,8 +124,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = +1 } },
 	{ Mod1Mask|ShiftMask,           XK_equal,  setgaps,        {.i = 0  } },
-	{ Mod1Mask|ShiftMask,           XK_comma,  tagswapmon,     {.i = +1 } },
-	{ Mod1Mask|ShiftMask,           XK_period, tagswapmon,     {.i = -1 } },
+	{ ControlMask|ShiftMask,        XK_comma,  tagswapmon,     {.i = +1 } },
+	{ ControlMask|ShiftMask,        XK_period, tagswapmon,     {.i = -1 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
