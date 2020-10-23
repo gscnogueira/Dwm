@@ -80,7 +80,8 @@ static const char *incognitobravecmd[] = { "brave", "--incognito",NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-    { MODKEY,                       XK_e,      spawn,          SHCMD("emacs") },
+    { MODKEY,                       XK_e,      spawn,          SHCMD("thunderbird") },
+    { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacs") },
     { MODKEY,                       XK_a,      spawn,          SHCMD("clipmenu") },
     { MODKEY,                       XK_F3,     spawn,          SHCMD(" amixer -D pulse sset Master 5%+ ;refbar.sh")},
     { MODKEY,                       XK_F2,     spawn,          SHCMD(" amixer -D pulse sset Master 5%-;refbar.sh")},
