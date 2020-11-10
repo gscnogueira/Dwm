@@ -81,8 +81,7 @@ static const char *incognitobravecmd[] = { "brave", "--incognito",NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-    { MODKEY,                       XK_e,      spawn,          SHCMD("thunderbird") },
-    { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacs") },
+    { MODKEY,		                XK_e,      spawn,          SHCMD("emacs") },
     { MODKEY,                       XK_a,      spawn,          SHCMD("clipmenu") },
     { MODKEY,                       XK_F3,     spawn,          SHCMD(" amixer -D pulse sset Master 5%+ ;refbar.sh")},
     { MODKEY,                       XK_F2,     spawn,          SHCMD(" amixer -D pulse sset Master 5%-;refbar.sh")},
@@ -99,6 +98,8 @@ static Key keys[] = {
     { MODKEY,                       XK_F4,     spawn,          SHCMD("playerctl previous") },
     { MODKEY,                       XK_F6,     spawn,          SHCMD("playerctl next") },
     { MODKEY,                       XK_b,      spawn,          SHCMD("brave") },
+    { MODKEY,                       XK_f,      spawn,          SHCMD("firefox") },
+	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("pcmanfm") },
     { MODKEY|ShiftMask,             XK_b,      spawn,          {.v = incognitobravecmd} },
     { MODKEY,                       XK_c,      spawn,          {.v = chromiumcmd} },
 	{ Mod1Mask,                     XK_space,  togglescratch,  {.v = scratchpadcmd } },
@@ -115,7 +116,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	/* { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} }, */
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} },
