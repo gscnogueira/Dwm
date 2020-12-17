@@ -8,7 +8,7 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char buttonbar[]       = " ";
-static const char *fonts[]          = { "Wuncon Siji:size=14", "TerminessTTF Nerd Font:size=12"};
+static const char *fonts[]          = {"Ubuntu Nerd Font:size=10"};
 static const char dmenufont[]       =  "TerminessTTF Nerd Font:size=12:";
 static const char col_gray1[]       = "#282a36";
 static const char col_gray2[]       = "#44475a";
@@ -161,7 +161,7 @@ static Button buttons[] = {
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
+	{ ClkClientWin,         Mod1Mask,       Button1,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
