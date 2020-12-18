@@ -136,8 +136,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = +1 } },
 	{ Mod1Mask|ShiftMask,           XK_equal,  setgaps,        {.i = 0  } },
-	{ ControlMask|ShiftMask,        XK_comma,  tagswapmon,     {.i = +1 } },
-	{ ControlMask|ShiftMask,        XK_period, tagswapmon,     {.i = -1 } },
+	{ ControlMask|ShiftMask,        XK_bracketleft,  tagswapmon,     {.i = +1 } },
+	{ ControlMask|ShiftMask,        XK_bracketright, tagswapmon,     {.i = -1 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
