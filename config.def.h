@@ -10,18 +10,18 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char buttonbar[]       = " ";
 static const char *fonts[]          = {"TerminessTTF Nerd Font:size=12"};
 static const char dmenufont[]       =  "TerminessTTF Nerd Font:size=12:";
-static const char col_gray1[]       = "#282a36";
-static const char col_gray2[]       = "#44475a";
-static const char col_gray3[]       = "#6272a4";
-static const char col_gray4[]       = "#f8f8f2";
-static const char col_cyan[]        = "#bd93f9";
+static const char col_gray1[]       = "#2e3440";
+static const char col_gray2[]       = "#3b4252";
+static const char col_gray3[]       = "#4c566a";
+static const char col_gray4[]       = "#d8dee9";
+static const char col_cyan[]        = "#81a1c1";
 static const char *colors[][3]      = {
 	[SchemeNorm] = { "#f8f8f2", "#282a36", col_gray2 },
-	[SchemeSel]  = { "#f8f8f2", "#bd93f9" ,  "#bd93f9"  },
+	[SchemeSel]  = { "#f8f8f2", "#bd93f9" ,  "#8fbcbb"  },
 	[SchemeStatus]  = { col_gray4, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
     [SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]  = { col_cyan, "#44475a",  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]  = { col_cyan, "#434c5e",  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
     [SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
