@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx     = 0;        /* gaps between windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -18,7 +18,7 @@ static const char col_cyan[]        = "#81a1c1";
 static const char *colors[][3]      = {
 	[SchemeNorm] = { "#d8dee9", "#2e3440", "#434c5e" },
 	[SchemeSel]  = { "#f8f8f2", "#bd93f9" ,  "#8fbcbb"  },
-	[SchemeStatus]  = { col_gray4, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeStatus]  = { col_gray1,"#5E81AC",  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
     [SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
     [SchemeInfoSel]  = { col_cyan, "#434c5e",  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
